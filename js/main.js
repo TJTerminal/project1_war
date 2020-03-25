@@ -80,7 +80,9 @@ resetButton.addEventListener('click', resetClick);
 // shuffle, split into 2, compare, tally up
 
 function initialize() {
-    
+    shuffle()
+    splitCards()
+
 }
 
 // create a deck
@@ -128,17 +130,19 @@ function splitCards(deck) {
 
 function render () {
     // loop through each hand and create a div and append it to DOM
-    for (i = 0; i < deck.length; i++) {
+    //for (i = 0; i < deck.length; i++) {
         // append
-        document.getElementById('deck').append()
+//        document.getElementById('deck').append()
 
-    }
+  //  }
 
 }
 
 function flipCard(event) {
     console.log(event);
+    // render();
 
+    // console.log(document.getElementById('deck'));
 }
 
 function resetClick(event) {
