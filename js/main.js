@@ -1,58 +1,58 @@
 /*----- constants -----*/
-// this will hard code deck creation
+// this will hard code deck creation something
 const deck = [
-    {value: 2, face: 'd02'},
-    {value: 2, face: 'c02'},
-    {value: 2, face: 's02'},
-    {value: 2, face: 'h02'},
-    {value: 3, face: 'd03'},
-    {value: 3, face: 'c03'},
-    {value: 3, face: 's03'},
-    {value: 3, face: 'h03'},
-    {value: 4, face: 'd04'},
-    {value: 4, face: 'c04'},
-    {value: 4, face: 's04'},
-    {value: 4, face: 'h04'},
-    {value: 5, face: 'd05'},
-    {value: 5, face: 'c05'},
-    {value: 5, face: 's05'},
-    {value: 5, face: 'h05'},
-    {value: 6, face: 'd06'},
-    {value: 6, face: 'c06'},
-    {value: 6, face: 's06'},
-    {value: 6, face: 'h06'},
-    {value: 7, face: 'd07'},
-    {value: 7, face: 'c07'},
-    {value: 7, face: 's07'},
-    {value: 7, face: 'h07'},
-    {value: 8, face: 'd08'},
-    {value: 8, face: 'c08'},
-    {value: 8, face: 's08'},
-    {value: 8, face: 'h08'},
-    {value: 9, face: 'd09'},
-    {value: 9, face: 'c09'},
-    {value: 9, face: 's09'},
-    {value: 9, face: 'h09'},
-    {value: 10, face: 'd10'},
-    {value: 10, face: 'c10'},
-    {value: 10, face: 's10'},
-    {value: 10, face: 'h10'},
-    {value: 11, face: 'dJ'},
-    {value: 11, face: 'cJ'},
-    {value: 11, face: 'sJ'},
-    {value: 11, face: 'hJ'},
-    {value: 12, face: 'dQ'},
-    {value: 12, face: 'cQ'},
-    {value: 12, face: 'sQ'},
-    {value: 12, face: 'hQ'},
-    {value: 13, face: 'dK'},
-    {value: 13, face: 'cK'},
-    {value: 13, face: 'sK'},
-    {value: 13, face: 'hK'},
-    {value: 14, face: 'dA'},
-    {value: 14, face: 'cA'},
-    {value: 14, face: 'sA'},
-    {value: 14, face: 'hA'}
+    {value: 2, face: 'd02', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 2, face: 'c02', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 2, face: 's02', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 2, face: 'h02', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 3, face: 'd03', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 3, face: 'c03', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 3, face: 's03', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 3, face: 'h03', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 4, face: 'd04', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 4, face: 'c04', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 4, face: 's04', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 4, face: 'h04', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 5, face: 'd05', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 5, face: 'c05', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 5, face: 's05', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 5, face: 'h05', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 6, face: 'd06', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 6, face: 'c06', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 6, face: 's06', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 6, face: 'h06', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 7, face: 'd07', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 7, face: 'c07', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 7, face: 's07', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 7, face: 'h07', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 8, face: 'd08', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 8, face: 'c08', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 8, face: 's08', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 8, face: 'h08', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 9, face: 'd09', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 9, face: 'c09', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 9, face: 's09', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 9, face: 'h09', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 10, face: 'd10', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 10, face: 'c10', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 10, face: 's10', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 10, face: 'h10', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 11, face: 'dJ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 11, face: 'cJ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 11, face: 'sJ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 11, face: 'hJ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 12, face: 'dQ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 12, face: 'cQ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 12, face: 'sQ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 12, face: 'hQ', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 13, face: 'dK', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 13, face: 'cK', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 13, face: 'sK', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 13, face: 'hK', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 14, face: 'dA', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 14, face: 'cA', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 14, face: 'sA', img: 'css/card-deck/images/backs/blue.svg'},
+    {value: 14, face: 'hA', img: 'css/card-deck/images/backs/blue.svg'}
 ]
 
 
@@ -61,9 +61,12 @@ const player2 = null;
 
 
 
+
 /*----- app's state (variables) -----*/
-let player1hand = [];
-let player2hand = [];
+let player1Deck = [];
+let player2Deck = [];
+let player1Hand = [];
+let player2Hand = [];
 
 
 /*----- cached element references -----*/
@@ -74,14 +77,13 @@ const resetButton = document.getElementById('reset-button');
 fightButton.addEventListener('click', flipCard);
 resetButton.addEventListener('click', resetClick);
 
-
 /*----- functions -----*/
 
 // shuffle, split into 2, compare, tally up
-
+// when the page loads, the deck should be shuffled and split into 2 and ready to play
 function initialize() {
-    shuffle()
-    splitCards()
+    shuffle(deck)
+    splitDeck(deck);
 
 }
 
@@ -118,14 +120,43 @@ function shuffle(deck) {
 }
 
 // split the shuffled deck into half
-function splitCards(deck) {
+function splitDeck(deck) {
     var i = 0;
     while(i != deck.length) {
-        player1hand.push(deck[i]);
-        player2hand.push(deck[i + 1]);
+        player1Deck.push(deck[i]);
+        player2Deck.push(deck[i + 1]);
         i += 2;
     }
-    
+}
+
+// take cards from the top of the deck and show face up when fight button is pressed
+function flipCard() {
+    // const cardObject = {
+    //     imageClubs: 'css/card-deck/images/clubs',
+    //     imageDiamonds: 'css/card-deck/images/diamonds',
+    //     imageHearts: 'css/card-deck/images/hearts',
+    //     imageSpades: 'css/card-deck/images/spades'
+    // }
+
+    // let cardImage = cardObject.imageClubs
+
+   // grab first element in player1 and player2 deck
+   player1Hand.push(player1Deck[0]);
+   player2Hand.push(player2Deck[0]);
+   // use DOM manipulation to render the cards on the cardShown elem
+   let cardShown = document.getElementById('cardShown1');
+   let cardShown2 = document.getElementById('cardShown2');
+   // let random card image from the deck show when fight button is clicked
+   let randomImage = deck[Math.floor(Math.random() * deck.length)].face;
+   let randomImage2 = deck[Math.floor(Math.random() * deck.length)].face;
+
+
+   cardShown.setAttribute('class', 'card ' + randomImage);
+   cardShown2.setAttribute('class', 'card ' + randomImage2);
+//    cardShown.setAttribute('src', cardImage);
+
+   console.log(player1Deck[0]);
+   console.log(player2Deck[0]);
 }
 
 function render () {
@@ -138,17 +169,21 @@ function render () {
 
 }
 
-function flipCard(event) {
-    console.log(event);
-    // render();
-
-    // console.log(document.getElementById('deck'));
-}
-
 function resetClick(event) {
     console.log(event);
     location.reaload();
 }
+
+
+    /**
+     * 
+     * check win
+     * write a conditional:
+     * if player1Hand > player2Hand
+     * then pop both hands
+     * and push to player1winningdeck
+     * 
+     */
 
 
 
