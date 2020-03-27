@@ -16,7 +16,7 @@ const deck = [
     {value: 5, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
     {value: 5, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
     {value: 5, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
-    {value: 5, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 5, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},   
     {value: 6, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
     {value: 6, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
     {value: 6, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
@@ -119,7 +119,7 @@ function splitDeck(deck) {
     }
 }
 
-// take cards from the top of the deck and show face up when fight button is pressed
+// take a card from the top of the deck and show face up when fight button is pressed
 function flipCard() {
    player1Hand.push(player1Deck[0]);
    player2Hand.push(player2Deck[0]);
@@ -137,8 +137,6 @@ function compareCards() {
     if (player1Hand[0].value === player2Hand[0].value) {
         //if values are equal, call war
         war();
-        // when calling war, flip new card
-        flipCard();
     } else if (player1Hand[0].value > player2Hand[0].value) {
         // push current cards into winner's separate deck
         p1WinDeck.push(player1Hand.pop());
@@ -159,18 +157,16 @@ function compareCards() {
 }
 
 function war() {
-    //warMessage.innerHTML("It's War!");
-    // flip another card
-    player1Hand.push(player1Deck[0]);
-    player2Hand.push(player2Deck[0]);
-    player1Deck.shift();
-    player2Deck.shift();
-    cardShown1.setAttribute('src', `${player1Hand[0].img}`);
-    cardShown2.setAttribute('src', `${player1Hand[0].img}`); 
+    warMessage.innerHTML = "It's War!";
     // compare the flipped cards
     if (player1Hand[0].value === player2Hand[0].value) {
-        // when calling war, flip new card
-        flipCard();
+        // if another tie, flip new card
+        player1Hand.push(player1Deck[0]);
+        player2Hand.push(player2Deck[0]);
+        player1Deck.shift();
+        player2Deck.shift();
+        cardShown1.setAttribute('src', `${player1Hand[0].img}`);
+        cardShown2.setAttribute('src', `${player1Hand[0].img}`); 
     } else if (player1Hand[0].value > player2Hand[0].value) {
         // push current cards into winner's separate deck
         p1WinDeck.push(player1Hand.pop());
