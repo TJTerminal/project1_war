@@ -21,3 +21,5 @@ If both players present cards of equal value they both lay down four cards. The 
 Winning the Game
 
 The player that captures all the cards is the winner.
+
+link:file:///Users/tedjang/code/project1_war/index.html
