@@ -96,7 +96,7 @@ function initialize() {
     splitDeck(deck);
 }
 
-// shuffle the deck
+// shuffle the deck upon loading
 function shuffle(deck) {
     for (var i = 0; i < deck.length; i++) {
         let randomDeck1 = Math.floor(Math.random() * deck.length);
@@ -109,7 +109,7 @@ function shuffle(deck) {
     console.log(deck);
 }
 
-// split the shuffled deck into half
+// split the shuffled deck into half upon loading
 function splitDeck(deck) {
     var i = 0;
     while(i != deck.length) {
@@ -135,32 +135,59 @@ function flipCard() {
 // compare the face up cards
 function compareCards() {
     if (player1Hand[0].value === player2Hand[0].value) {
+        //if values are equal, call war
         war();
+        // when calling war, flip new card
         flipCard();
     } else if (player1Hand[0].value > player2Hand[0].value) {
         // push current cards into winner's separate deck
         p1WinDeck.push(player1Hand.pop());
         p1WinDeck.push(player2Hand.pop());
         console.log('p1WinDeck', p1WinDeck);
+        // add a point if won
         player1Score += 1;
         addScore();
-        //player1WinMessage.innerHTML('Player 1 Wins!');
+        player1WinMessage.innerHTML = 'Player 1 Wins!';
     } else {
         p2WinDeck.push(player1Hand.pop());
         p2WinDeck.push(player2Hand.pop());
         console.log('p2WinDeck', p2WinDeck);
         player2Score += 1;
         addScore();
-        //player2WinMesssage.innerHTML('Player 2 Wins!');
+        player2WinMesssage.innerHTML = 'Player 2 Wins!';
     }
 }
 
 function war() {
     //warMessage.innerHTML("It's War!");
     // flip another card
-    flipCard();
+    player1Hand.push(player1Deck[0]);
+    player2Hand.push(player2Deck[0]);
+    player1Deck.shift();
+    player2Deck.shift();
+    cardShown1.setAttribute('src', `${player1Hand[0].img}`);
+    cardShown2.setAttribute('src', `${player1Hand[0].img}`); 
     // compare the flipped cards
-    compareCards();
+    if (player1Hand[0].value === player2Hand[0].value) {
+        // when calling war, flip new card
+        flipCard();
+    } else if (player1Hand[0].value > player2Hand[0].value) {
+        // push current cards into winner's separate deck
+        p1WinDeck.push(player1Hand.pop());
+        p1WinDeck.push(player2Hand.pop());
+        console.log('p1WinDeck', p1WinDeck);
+        // add a point if won
+        player1Score += 1;
+        addScore();
+        player1WinMessage.innerHTML = 'Player 1 Wins!';
+    } else {
+        p2WinDeck.push(player1Hand.pop());
+        p2WinDeck.push(player2Hand.pop());
+        console.log('p2WinDeck', p2WinDeck);
+        player2Score += 1;
+        addScore();
+        player2WinMesssage.innerHTML = 'Player 2 Wins!';
+    }
     // update score
     addScore();
 }
@@ -171,22 +198,27 @@ function resetClick(event) {
 }
 
 function addScore() {
-    addPlayer1Score.innerHTML('SCORE: ' + player1Score);
-    addPlayer2Score.innerHTML('SCORE: ' + player2Score);
+    addPlayer1Score.innerHTML = 'SCORE: ' + player1Score;
+    addPlayer2Score.innerHTML = 'SCORE: ' + player2Score;
 }
 
 function updateCardsLeft() {
-    player1CardsLeft.innerHTML('CARDS LEFT: ' + player1Deck.length);
-    player2CardsLeft.innerHTML('CARDS LEFT: ' + player2Deck.length);
+    player1CardsLeft.innerHTML = 'CARDS LEFT: ' + player1Deck.length;
+    player2CardsLeft.innerHTML = 'CARDS LEFT: ' + player2Deck.length;
 }
 
 function declareWinner() {
     let gameEndMessage = document.getElementById('message');
-    if (player1Score > player2Score) {
-        gameEndMessage.innerHTML('Game Over: Player 1 Wins');
-    } else {
-        gameEndMessage.innerHTML('Game Over: Player 2 Wins');
+    if (player1Score > player2Score && player1Deck.length === 0 && player2Deck.length === 0) {
+        gameEndMessage.innerHTML = 'Game Over: Player 1 Wins';
+    } else if (player2Score > player1Score && player1Deck.length === 0 && player2Deck.length === 0) {
+        gameEndMessage.innerHTML = 'Game Over: Player 2 Wins';
     }
+}
+
+// reload the page if reset button is clicked
+function resetClick() {
+    location.reload();
 }
 
 initialize();
