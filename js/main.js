@@ -96,25 +96,6 @@ function initialize() {
     splitDeck(deck);
 }
 
-// create a deck
-// function createDeck() {
-//     let deck = [];
-//     deck.length = 0;
-//     let card = (cardTypes, cardValues) => {
-//         this.cardTypes: type;
-//         this.cardValues: value;
-//     }
-//     // create 52 cards using 2 for each loop
-//     // loop the cardTypes or cardValues first
-//     cardTypes.forEach(cardTypes => {
-//         cardValues.forEach(cardValues =>{
-//             // push each card object into deck array
-//             deck.push(new card(cardTypes, cardValues));
-//         })
-//     })
-//     console.log(deck);
-// }
-
 // shuffle the deck
 function shuffle(deck) {
     for (var i = 0; i < deck.length; i++) {
@@ -207,37 +188,5 @@ function declareWinner() {
         gameEndMessage.innerHTML('Game Over: Player 2 Wins');
     }
 }
-
-/*----- PSEUDOCODES -----*/
-
-// At start, initialize 
-
-//THE DEAL
-//1.) Shuffle and civide the 52 cards deck evenly between players
-
-
-//2.) Each player places their stack of cards face down, in front of them. Anyone can go first.
-
-
-//THE PLAY
-//3.) Each player turns up a card at the same time. Ace is highest and the 2 is lowest.
-
-
-//4.) If the cards are the same rank, it is War: Each player turns up one card face down and one card face up.
-// if player 1 cards === player 2 cards, then play War function
-
-
-
-//5.) Player with higher card takes BOTH cards and puts them, face down, on BOTTOM of his deck.
-// The player with the higher cards takes both piles.
-// if player 1 cards > player 2 cards, player 1 takes both and vice versa
-
-// If the turned-up cards are again the same rank, each player places another card face down and turns another card face up.
-
-// The player with the higher card takes all 10 cards, and so on.
-
-//HOW TO KEEP SCORE
-//The game ends when one player has won all the cards.
-
 
 initialize();
