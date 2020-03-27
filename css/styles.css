@@ -1,4 +1,3 @@
-//something
 body {
     background-color: green;
     text-align: center;
@@ -29,7 +28,7 @@ h1 {
     font-size: larger;
 }
 
-.cardsShown {
+#cardShown1, #cardShown2 {
     margin: auto;
     text-align: center;
     width: 200px;

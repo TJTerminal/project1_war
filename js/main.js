@@ -1,77 +1,87 @@
 /*----- constants -----*/
-// this will hard code deck creation something
+// this will hard code deck creation
 const deck = [
-    {value: 2, face: 'd02', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 2, face: 'c02', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 2, face: 's02', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 2, face: 'h02', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 3, face: 'd03', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 3, face: 'c03', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 3, face: 's03', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 3, face: 'h03', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 4, face: 'd04', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 4, face: 'c04', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 4, face: 's04', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 4, face: 'h04', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 5, face: 'd05', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 5, face: 'c05', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 5, face: 's05', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 5, face: 'h05', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 6, face: 'd06', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 6, face: 'c06', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 6, face: 's06', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 6, face: 'h06', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 7, face: 'd07', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 7, face: 'c07', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 7, face: 's07', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 7, face: 'h07', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 8, face: 'd08', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 8, face: 'c08', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 8, face: 's08', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 8, face: 'h08', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 9, face: 'd09', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 9, face: 'c09', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 9, face: 's09', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 9, face: 'h09', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 10, face: 'd10', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 10, face: 'c10', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 10, face: 's10', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 10, face: 'h10', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 11, face: 'dJ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 11, face: 'cJ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 11, face: 'sJ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 11, face: 'hJ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 12, face: 'dQ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 12, face: 'cQ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 12, face: 'sQ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 12, face: 'hQ', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 13, face: 'dK', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 13, face: 'cK', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 13, face: 'sK', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 13, face: 'hK', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 14, face: 'dA', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 14, face: 'cA', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 14, face: 'sA', img: 'css/card-deck/images/backs/blue.svg'},
-    {value: 14, face: 'hA', img: 'css/card-deck/images/backs/blue.svg'}
+    {value: 2, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 2, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 2, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 2, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 3, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 3, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 3, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 3, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 4, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 4, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 4, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 4, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 5, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 5, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 5, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 5, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 6, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 6, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 6, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 6, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 7, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 7, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 7, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 7, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 8, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 8, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 8, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 8, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 9, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 9, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 9, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 9, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 10, suit: 'diamonds', img:`css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 10, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 10, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 10, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 11, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 11, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 11, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 11, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 12, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 12, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 12, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 12, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 13, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 13, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 13, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 13, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 14, suit: 'diamonds', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 14, suit: 'clubs', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 14, suit: 'spades', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`},
+    {value: 14, suit: 'hearts', img: `css/card-deck/images/${this.suit}/${this.suit}-${this.value}.svg`}
 ]
-
 
 const player1 = null;
 const player2 = null;
-
-
-
 
 /*----- app's state (variables) -----*/
 let player1Deck = [];
 let player2Deck = [];
 let player1Hand = [];
 let player2Hand = [];
-
+let p1WinDeck = [];
+let p2WinDeck = [];
+let tempP1Idx;
+let tempP2Idx;
+let player1Score = null;
+let player2Score = null;
 
 /*----- cached element references -----*/
 const fightButton = document.getElementById('fight-button');
 const resetButton = document.getElementById('reset-button');
+let cardShown1 = document.getElementById('cardShown1');
+let cardShown2 = document.getElementById('cardShown2');
+let player1WinMessage = document.getElementById('message');
+let player2WinMesssage = document.getElementById('message');
+let warMessage = document.getElementById('message');
+let player1CardsLeft = document.getElementById('deck1');
+let player2CardsLeft = document.getElementById('deck2');
+let addPlayer1Score = document.getElementById('score1');
+let addPlayer2Score = document.getElementById('score2');
 
 /*----- event listeners -----*/
 fightButton.addEventListener('click', flipCard);
@@ -82,9 +92,8 @@ resetButton.addEventListener('click', resetClick);
 // shuffle, split into 2, compare, tally up
 // when the page loads, the deck should be shuffled and split into 2 and ready to play
 function initialize() {
-    shuffle(deck)
+    shuffle(deck);
     splitDeck(deck);
-
 }
 
 // create a deck
@@ -131,42 +140,48 @@ function splitDeck(deck) {
 
 // take cards from the top of the deck and show face up when fight button is pressed
 function flipCard() {
-    // const cardObject = {
-    //     imageClubs: 'css/card-deck/images/clubs',
-    //     imageDiamonds: 'css/card-deck/images/diamonds',
-    //     imageHearts: 'css/card-deck/images/hearts',
-    //     imageSpades: 'css/card-deck/images/spades'
-    // }
-
-    // let cardImage = cardObject.imageClubs
-
-   // grab first element in player1 and player2 deck
    player1Hand.push(player1Deck[0]);
    player2Hand.push(player2Deck[0]);
-   // use DOM manipulation to render the cards on the cardShown elem
-   let cardShown = document.getElementById('cardShown1');
-   let cardShown2 = document.getElementById('cardShown2');
-   // let random card image from the deck show when fight button is clicked
-   let randomImage = deck[Math.floor(Math.random() * deck.length)].face;
-   let randomImage2 = deck[Math.floor(Math.random() * deck.length)].face;
-
-
-   cardShown.setAttribute('class', 'card ' + randomImage);
-   cardShown2.setAttribute('class', 'card ' + randomImage2);
-//    cardShown.setAttribute('src', cardImage);
-
-   console.log(player1Deck[0]);
-   console.log(player2Deck[0]);
+   player1Deck.shift();
+   player2Deck.shift();
+   cardShown1.setAttribute('src', `${player1Hand[0].img}`);
+   cardShown2.setAttribute('src', `${player1Hand[0].img}`);
+   console.log('p1hand', player1Hand[0]);
+   console.log('p2hand', player2Hand[0]);
+   compareCards();
 }
 
-function render () {
-    // loop through each hand and create a div and append it to DOM
-    //for (i = 0; i < deck.length; i++) {
-        // append
-//        document.getElementById('deck').append()
+// compare the face up cards
+function compareCards() {
+    if (player1Hand[0].value === player2Hand[0].value) {
+        war();
+        flipCard();
+    } else if (player1Hand[0].value > player2Hand[0].value) {
+        // push current cards into winner's separate deck
+        p1WinDeck.push(player1Hand.pop());
+        p1WinDeck.push(player2Hand.pop());
+        console.log('p1WinDeck', p1WinDeck);
+        player1Score += 1;
+        addScore();
+        //player1WinMessage.innerHTML('Player 1 Wins!');
+    } else {
+        p2WinDeck.push(player1Hand.pop());
+        p2WinDeck.push(player2Hand.pop());
+        console.log('p2WinDeck', p2WinDeck);
+        player2Score += 1;
+        addScore();
+        //player2WinMesssage.innerHTML('Player 2 Wins!');
+    }
+}
 
-  //  }
-
+function war() {
+    //warMessage.innerHTML("It's War!");
+    // flip another card
+    flipCard();
+    // compare the flipped cards
+    compareCards();
+    // update score
+    addScore();
 }
 
 function resetClick(event) {
@@ -174,21 +189,24 @@ function resetClick(event) {
     location.reaload();
 }
 
+function addScore() {
+    addPlayer1Score.innerHTML('SCORE: ' + player1Score);
+    addPlayer2Score.innerHTML('SCORE: ' + player2Score);
+}
 
-    /**
-     * 
-     * check win
-     * write a conditional:
-     * if player1Hand > player2Hand
-     * then pop both hands
-     * and push to player1winningdeck
-     * 
-     */
+function updateCardsLeft() {
+    player1CardsLeft.innerHTML('CARDS LEFT: ' + player1Deck.length);
+    player2CardsLeft.innerHTML('CARDS LEFT: ' + player2Deck.length);
+}
 
-
-
-
-
+function declareWinner() {
+    let gameEndMessage = document.getElementById('message');
+    if (player1Score > player2Score) {
+        gameEndMessage.innerHTML('Game Over: Player 1 Wins');
+    } else {
+        gameEndMessage.innerHTML('Game Over: Player 2 Wins');
+    }
+}
 
 /*----- PSEUDOCODES -----*/
 
